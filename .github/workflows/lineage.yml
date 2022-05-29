@@ -11,13 +11,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Installing build dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install zip gcc-multilib g++-multilib \
-            libc6-dev-i386 lib32ncurses5-dev lib32z1-dev \
-            libgl1-mesa-dev libxml2-utils xsltproc schedtool
-          sudo ln -f -s /usr/bin/python2.7 /usr/bin/python
+#      - name: Installing build dependencies
+#        run: |
+#          sudo apt-get update
+#          sudo apt-get install zip gcc-multilib g++-multilib \
+#            libc6-dev-i386 lib32ncurses5-dev lib32z1-dev \
+#            libgl1-mesa-dev libxml2-utils xsltproc schedtool
+#          sudo ln -f -s /usr/bin/python2.7 /usr/bin/python
 
       - name: Syncing LineageOS sources
         run: |
@@ -45,10 +45,10 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: lineage
-          path: /home/runner/lineage/out/target/product/viam1/lineage*.zip
+          path: /home/me/lineage/out/target/product/viam1/lineage*.zip
       
       - name: Uploading LineageOS Recovery
         uses: actions/upload-artifact@v2
         with:
           name: recovery
-          path: /home/runner/lineage/out/target/product/viam1/recovery.img
+          path: /home/me/lineage/out/target/product/viam1/recovery.img
