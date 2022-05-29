@@ -39,7 +39,7 @@ jobs:
           export ALLOW_MISSING_DEPENDENCIES=true
           export LC_ALL=C
           lunch lineage_viam1-user
-          make -j$(nproc --all) recoveryimage
+          make -j$(nproc --all)
 
       - name: Uploading LineageOS build
         uses: actions/upload-artifact@v2
